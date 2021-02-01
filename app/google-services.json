@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "233401004581",
+    "project_id": "boutique-booking-apps",
+    "storage_bucket": "boutique-booking-apps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233401004581:android:34d8268a2674df08d045cc",
+        "android_client_info": {
+          "package_name": "com.example.group0"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "233401004581-iqklvsstehdijt0407675u34h83ocg5d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdgV1jB0bF193Lt83dhW3h9Cax8FwH9y4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "233401004581-iqklvsstehdijt0407675u34h83ocg5d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
