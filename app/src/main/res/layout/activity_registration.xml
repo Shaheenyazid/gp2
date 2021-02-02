@@ -10,7 +10,7 @@
         android:id="@+id/tv_goblok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Registration"
+        android:text="@string/registration"
         android:textColor="#E91E63"
         android:textSize="22sp"
         android:textStyle="bold"
@@ -34,7 +34,7 @@
         app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_goblok"
-        app:layout_constraintVertical_bias="0.288" />
+        app:layout_constraintVertical_bias="0.131" />
 
     <EditText
         android:id="@+id/etUserPassword"
@@ -112,13 +112,5 @@
         app:layout_constraintTop_toBottomOf="@+id/etUserEmail"
         app:layout_constraintVertical_bias="0.041" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="99dp"
-        android:layout_height="92dp"
-        app:layout_constraintBottom_toTopOf="@+id/etUserName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_goblok"
-        app:srcCompat="@mipmap/ic_launcher" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
