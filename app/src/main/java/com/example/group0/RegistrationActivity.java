@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -14,13 +15,17 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegistrationActivity extends AppCompatActivity {
 
-    private EditText userName, userPassword, userEmail, userNo;
+    private EditText userName, userPassword, userEmail, userNo, userAge;
     private Button regButton;
     private TextView userLogin;
     private FirebaseAuth firebaseAuth;
+    private ImageView userProfilePic;
+    String email, name, age, password, noPhone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +47,12 @@ public class RegistrationActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task){
 
                             if (task.isSuccessful()){
-                               sendEmailVerification();
+                                sendEmailVerification();
+                                //firebaseAuth.signOut();
+                               /*sendUserData();
+                                Toast.makeText(RegistrationActivity.this,"Succesfully Register, Upload complete !!", Toast.LENGTH_SHORT).show();
+                                finish();
+                                startActivity(new Intent(RegistrationActivity.this, MainActivity.class));*/
 
                             }else{
                                 Toast.makeText(RegistrationActivity.this, "Registration Unsuccesful", Toast.LENGTH_SHORT).show();
@@ -69,17 +79,21 @@ public class RegistrationActivity extends AppCompatActivity {
         userNo = (EditText)findViewById(R.id.etPhone);
         regButton = (Button)findViewById(R.id.btnRegister);
         userLogin = (TextView)findViewById(R.id.tvUserLogin);
+        userAge = (EditText)findViewById(R.id.etAge);
+        userProfilePic = (ImageView)findViewById(R.id.ivPic);
     }
 
     private Boolean validate(){
         Boolean result = false;
 
-        String name = userName.getText().toString();
-        String password = userPassword.getText().toString();
-        String email = userEmail.getText().toString();
-        String noPhone = userNo.getText().toString();
+         name = userName.getText().toString();
+         password = userPassword.getText().toString();
+         email = userEmail.getText().toString();
+         noPhone = userNo.getText().toString();
+         age = userAge.getText().toString();
 
-        if(name.isEmpty() || password.isEmpty() || email.isEmpty()){
+
+        if(name.isEmpty() || password.isEmpty() || email.isEmpty() || noPhone.isEmpty() || age.isEmpty()){
             Toast.makeText(this, "Please enter all the details", Toast.LENGTH_SHORT).show();
         }else{
             result = true;
@@ -95,6 +109,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if(task.isSuccessful()){
+                       sendUserData();
                         Toast.makeText(RegistrationActivity.this,"Succesfully Register, Verification mail sent !!", Toast.LENGTH_SHORT).show();
                         firebaseAuth.signOut();
                         finish();
@@ -106,5 +121,12 @@ public class RegistrationActivity extends AppCompatActivity {
             });
 
         }
+    }
+
+    private void sendUserData(){
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = firebaseDatabase.getReference("UserInfo").child(firebaseAuth.getUid()); //menentukan nk simpan dlm table mne
+        UserProfile userProfile = new UserProfile(age, email, name, noPhone); //constructor utk set data dalam database , refer file userProfile
+        myRef.setValue(userProfile);
     }
 }

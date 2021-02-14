@@ -8,17 +8,20 @@
         android:label="Arca Creation"
         android:supportsRtl="true"
         android:theme="@style/Theme.Group0">
-        <activity android:name=".activity_splashscreen"><intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".UpdatePassword"></activity>
+        <activity android:name=".UpdateProfile" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".PasswordActivity" />
+        <activity android:name=".activity_splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".SecondActivity" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

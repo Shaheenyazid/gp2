@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/kelabu"
     tools:context=".RegistrationActivity">
 
     <TextView
@@ -19,57 +20,63 @@
         app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.022" />
 
     <EditText
         android:id="@+id/etUserName"
-        android:layout_width="295dp"
-        android:layout_height="43dp"
+        android:layout_width="303dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="Username"
+        android:drawableLeft="@drawable/ic_username"
         android:inputType="textPersonName"
+        android:textColor="#139E91"
         android:textColorHint="#009688"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintHorizontal_bias="0.425"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_goblok"
-        app:layout_constraintVertical_bias="0.131" />
+        app:layout_constraintVertical_bias="0.268" />
 
     <EditText
         android:id="@+id/etUserPassword"
-        android:layout_width="289dp"
+        android:layout_width="306dp"
         android:layout_height="43dp"
         android:ems="10"
         android:hint="Password"
+        android:drawableLeft="@drawable/ic_password"
         android:inputType="textPassword"
+        android:textColor="#118A7F"
         android:textColorHint="#009688"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.438"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etUserName"
-        app:layout_constraintVertical_bias="0.107" />
+        app:layout_constraintVertical_bias="0.11" />
 
     <EditText
         android:id="@+id/etUserEmail"
-        android:layout_width="287dp"
+        android:layout_width="307dp"
         android:layout_height="47dp"
         android:ems="10"
         android:hint="Email"
+        android:drawableLeft="@drawable/ic_email"
         android:inputType="textEmailAddress"
+        android:textColor="#159C8F"
         android:textColorHint="#009688"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etUserPassword"
-        app:layout_constraintVertical_bias="0.152" />
+        app:layout_constraintVertical_bias="0.151" />
 
     <Button
         android:id="@+id/btnRegister"
-        android:layout_width="86dp"
-        android:layout_height="40dp"
+        android:layout_width="232dp"
+        android:layout_height="37dp"
         android:background="#E12364"
         android:text="Sign Up"
         android:textColor="#FDF6F9"
@@ -79,7 +86,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPhone"
-        app:layout_constraintVertical_bias="0.266" />
+        app:layout_constraintVertical_bias="0.699" />
 
     <TextView
         android:id="@+id/tvUserLogin"
@@ -87,30 +94,59 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:text="Already Sign In ? Login !"
-        android:textColor="#EA1A1A"
+        android:textColor="#E6DFDF"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/etPhone"
-        android:layout_width="290dp"
-        android:layout_height="38dp"
+        android:layout_width="313dp"
+        android:layout_height="47dp"
         android:layout_marginTop="44dp"
         android:ems="10"
-        android:hint="No Phone"
+        android:hint="Mobile Number eg:(+601111944453)"
         android:inputType="phone"
+        android:drawableLeft="@drawable/ic_no"
         android:textColor="#15CFBE"
         android:textColorHint="#009688"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etUserEmail"
-        app:layout_constraintVertical_bias="0.041" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="319dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="Age"
+        android:drawableLeft="@drawable/ic_age"
+        android:inputType="number"
+        android:textColor="#0D9E90"
+        android:textColorHint="#09A698"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPhone" />
+
+    <ImageView
+        android:id="@+id/ivPic"
+        android:layout_width="147dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/etUserName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_goblok"
+        app:layout_constraintVertical_bias="0.09"
+        app:srcCompat="@mipmap/ic_homeicon2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
