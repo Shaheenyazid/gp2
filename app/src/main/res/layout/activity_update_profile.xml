@@ -4,6 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/kelabu"
     tools:context=".UpdateProfile">
 
+    <ImageView
+        android:id="@+id/ivProfileUpdate"
+        android:layout_width="158dp"
+        android:layout_height="131dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <EditText
+        android:id="@+id/etNameUpdate"
+        android:layout_width="230dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivProfileUpdate"
+        app:layout_constraintVertical_bias="0.154" />
+
+
+    <EditText
+        android:id="@+id/etAgeUpdate"
+        android:layout_width="227dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="120dp"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmailUpdate"
+        app:layout_constraintVertical_bias="0.128" />
+
+    <TextView
+        android:id="@+id/tvEmailUpdate"
+        android:layout_width="231dp"
+        android:layout_height="39dp"
+        android:text="Email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNameUpdate"
+        app:layout_constraintVertical_bias="0.116" />
+
+    <EditText
+        android:id="@+id/etNoUpdate"
+        android:layout_width="227dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="No Phone"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAgeUpdate"
+        app:layout_constraintVertical_bias="0.151" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="155dp"
+        android:layout_height="46dp"
+        android:text="SAVE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNoUpdate" />
 </androidx.constraintlayout.widget.ConstraintLayout>
