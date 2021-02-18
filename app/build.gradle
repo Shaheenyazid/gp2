@@ -43,6 +43,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-storage'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation "androidx.exifinterface:exifinterface:1.3.2"
 }
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
