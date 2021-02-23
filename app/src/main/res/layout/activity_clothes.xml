@@ -1,9 +1,456 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Clothes">
+    android:layout_height="match_parent" >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:background="@color/kelabu"
+    tools:context=".Clothes" >
+
+        <TextView
+            android:id="@+id/tvClothes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Clothes"
+            android:textAllCaps="true"
+            android:textColor="#E91E63"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.485"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+       <View
+            android:id="@+id/view1"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#FBFBFB"
+            app:layout_constraintBottom_toTopOf="@+id/ivRed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvClothes" />
+
+        <ImageView
+            android:id="@+id/ivRed"
+            android:layout_width="134dp"
+            android:layout_height="194dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvClothes"
+            app:layout_constraintVertical_bias="0.035"
+            app:srcCompat="@mipmap/red_clothes" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#FBFBFB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivRed">
+
+        </View>
+
+        <ImageView
+            android:id="@+id/ivBlue"
+            android:layout_width="134dp"
+            android:layout_height="194dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2"
+            app:srcCompat="@mipmap/blue_clothes" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#FBFBFB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivBlue">
+
+        </View>
+
+        <ImageView
+            android:id="@+id/ivMar"
+            android:layout_width="134dp"
+            android:layout_height="194dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3"
+            app:srcCompat="@mipmap/mar_clothes" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#FBFBFB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivMar"/>
+
+        <ImageView
+            android:id="@+id/ivGreen"
+            android:layout_width="134dp"
+            android:layout_height="194dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view4"
+            app:srcCompat="@mipmap/green_clothes" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#FBFBFB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivGreen"/>
+
+        <ImageView
+            android:id="@+id/ivBlack"
+            android:layout_width="134dp"
+            android:layout_height="194dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view5"
+            app:srcCompat="@mipmap/black_clothes" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#FBFBFB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivBlack"/>
+
+        <ImageView
+            android:id="@+id/ivPeach"
+            android:layout_width="134dp"
+            android:layout_height="194dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view6"
+            app:srcCompat="@mipmap/peach_clothes" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#FBFBFB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPeach"/>
+
+        <ImageView
+            android:id="@+id/ivOpah"
+            android:layout_width="134dp"
+            android:layout_height="194dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.057"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view7"
+            app:srcCompat="@mipmap/opah_clothes" />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#FBFBFB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivOpah" />
+
+
+        <TextView
+            android:id="@+id/tvNameRed"
+            android:layout_width="183dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="8dp"
+            android:text="Arca09-19_Poppy (Top only)"
+            android:textColor="#EAEAEA"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivRed"
+            app:layout_constraintTop_toTopOf="@+id/ivRed" />
+
+        <TextView
+            android:id="@+id/tvColorRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Color: Poppy"
+            android:textColor="#F6F4F4"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivRed"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameRed" />
+
+        <TextView
+            android:id="@+id/tvPriceRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Price: RM150"
+            android:textColor="#FBFBFB"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivRed"
+            app:layout_constraintTop_toBottomOf="@+id/tvColorRed" />
+
+        <Button
+            android:id="@+id/btnPlaceOrder"
+            android:layout_width="145dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#E82665"
+            android:text="Place Order"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+        <TextView
+            android:id="@+id/tvNameBlue"
+            android:layout_width="183dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="8dp"
+            android:text="Arca09-16_Sweet Pea (Top only)"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivBlue"
+            app:layout_constraintTop_toBottomOf="@+id/ivRed" />
+
+        <TextView
+            android:id="@+id/tvColorBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Color: Sweet Pea"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivBlue"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameBlue" />
+
+     <TextView
+         android:id="@+id/tvPriceBlue"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="16dp"
+         android:layout_marginTop="8dp"
+         android:text="Price: RM150"
+         android:textColor="#FFFFFF"
+         android:textSize="16sp"
+         app:layout_constraintStart_toEndOf="@+id/ivBlue"
+         app:layout_constraintTop_toBottomOf="@id/tvColorBlue" />
+
+        <TextView
+            android:id="@+id/tvNameMar"
+            android:layout_width="183dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="8dp"
+            android:text="Arca09-13_Amaryllis (Top only)"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivMar"
+            app:layout_constraintTop_toBottomOf="@+id/ivBlue" />
+
+        <TextView
+            android:id="@+id/tvColorMar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Color: Amaryllis"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivMar"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameMar" />
+
+        <TextView
+            android:id="@+id/tvPriceMar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Price: RM150"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivMar"
+            app:layout_constraintTop_toBottomOf="@+id/tvColorMar" />
+
+        <TextView
+            android:id="@+id/tvNameGreen"
+            android:layout_width="183dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="8dp"
+            android:text="Arca09-08_Gerbera Daisy (Top only)"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivGreen"
+            app:layout_constraintTop_toBottomOf="@+id/ivMar" />
+
+        <TextView
+            android:id="@+id/tvColorGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Color: Gerbera Daisy"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivGreen"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameGreen" />
+
+        <TextView
+            android:id="@+id/tvPriceGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Price: RM150"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivGreen"
+            app:layout_constraintTop_toBottomOf="@+id/tvColorGreen" />
+
+        <TextView
+            android:id="@+id/tvNameBlack"
+            android:layout_width="183dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="8dp"
+            android:text="Arca09-02_Black Calla (Top only)"
+            android:textColor="#F4F4F4"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivBlack"
+            app:layout_constraintTop_toBottomOf="@+id/ivGreen" />
+
+        <TextView
+            android:id="@+id/tvColorBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Color: Black calla"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivBlack"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameBlack" />
+
+        <TextView
+            android:id="@+id/tvPriceBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Price: RM150"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivBlack"
+            app:layout_constraintTop_toBottomOf="@+id/tvColorBlack" />
+
+        <TextView
+            android:id="@+id/tvNamePeach"
+            android:layout_width="183dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="8dp"
+            android:text="Arca09-05_Dusty Lilac (Top only)"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivPeach"
+            app:layout_constraintTop_toBottomOf="@+id/ivBlack" />
+
+        <TextView
+            android:id="@+id/tvColorPeach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Color: Dusty lilac"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivPeach"
+            app:layout_constraintTop_toBottomOf="@+id/tvNamePeach" />
+
+        <TextView
+            android:id="@+id/tvPricePeach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Price: RM200"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivPeach"
+            app:layout_constraintTop_toBottomOf="@+id/tvColorPeach" />
+
+        <TextView
+            android:id="@+id/tvNameOpah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Opah Kalsom (Top only)"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivOpah"
+            app:layout_constraintTop_toBottomOf="@+id/ivPeach" />
+
+        <TextView
+            android:id="@+id/tvColorOpah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Color: Peach with green"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivOpah"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameOpah" />
+
+        <TextView
+            android:id="@+id/tvPriceOpah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Price: RM200"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivOpah"
+            app:layout_constraintTop_toBottomOf="@+id/tvColorOpah" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
+

@@ -13,7 +13,7 @@ import android.widget.Button;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SecondActivity extends AppCompatActivity {
-
+    private Button button;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -21,9 +21,21 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+        button = (Button) findViewById(R.id.btnClothes);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivityclothes();
+            }
+        });
+
         firebaseAuth = FirebaseAuth.getInstance();
 
     }
+        public void openActivityclothes() {
+            Intent intent = new Intent(this, Clothes.class);
+            startActivity(intent);
+        }
 
     private void Logout(){
         firebaseAuth.signOut();
