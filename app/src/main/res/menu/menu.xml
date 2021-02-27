@@ -3,12 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/kelabu">
 
-    <item
-        android:id="@+id/logoutMenu"
-        android:orderInCategory="100"
-        app:showAsAction="always"
-        android:title="Logout">
-    </item>
 
     <item
         android:id="@+id/profileMenu"

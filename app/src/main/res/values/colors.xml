@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="hitam">#000000</color>
     <color name="kelabu">#2e3241</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorPurple">#4a148c</color>
 </resources>
