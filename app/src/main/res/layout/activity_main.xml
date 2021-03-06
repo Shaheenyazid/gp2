@@ -5,20 +5,22 @@
     android:id="@+id/tvRegister"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/kelabu"
+    android:background="#A1B8B8"
     tools:context=".MainActivity">
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/iv_icon"
-        android:layout_width="158dp"
-        android:layout_height="128dp"
+        android:layout_width="217dp"
+        android:layout_height="159dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.121"
-        app:srcCompat="@mipmap/ic_homeicon" />
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="login.json"
+        app:lottie_loop="true" />
 
     <TextView
         android:id="@+id/tv_title"
@@ -27,7 +29,7 @@
         android:fontFamily="cursive"
         android:text="Arca Boutique Apps"
         android:textAlignment="center"
-        android:textColor="#21CC28"
+        android:textColor="#396C95"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,6 +45,7 @@
         android:layout_height="43dp"
         android:ems="10"
         android:hint="Email"
+        android:background="@drawable/custom_input"
         android:inputType="textPersonName"
         android:textColor="#0C8A7E"
         android:drawableLeft="@drawable/ic_username"
@@ -60,6 +63,7 @@
         android:layout_height="46dp"
         android:ems="10"
         android:hint="Password"
+        android:background="@drawable/custom_input"
         android:inputType="textPassword"
         android:textColor="#0E988B"
         android:drawableLeft="@drawable/ic_password"
@@ -74,7 +78,7 @@
         android:id="@+id/btnLogin"
         android:layout_width="193dp"
         android:layout_height="45dp"
-        android:background="#E82665"
+        android:background="@drawable/cantik"
         android:text="Login"
         android:textColor="#FBFBFB"
         android:textStyle="bold"
@@ -104,7 +108,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Please Sign Up !"
-        android:textColor="#E8E2E2"
+        android:textColor="#090909"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -117,12 +121,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot Password ?"
-        android:textColor="#F4F0F0"
+        android:textColor="#070707"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tvInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.802"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPassword"
-        app:layout_constraintVertical_bias="0.136" />
+        app:layout_constraintVertical_bias="0.09" />
 </androidx.constraintlayout.widget.ConstraintLayout>

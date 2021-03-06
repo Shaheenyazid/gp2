@@ -11,7 +11,9 @@
         android:label="Arca Creation"
         android:supportsRtl="true"
         android:theme="@style/Theme.Group0">
-        <activity android:name=".ContactUs"></activity>
+        <activity android:name=".WelcomePage"></activity>
+        <activity android:name=".BookingForm" />
+        <activity android:name=".ContactUs" />
         <activity android:name=".AboutUs" />
         <activity android:name=".Clothes" />
         <activity android:name=".UpdatePassword" />

@@ -2,4 +2,32 @@
     <string name="ArcaCreation">Group 0</string>
     <string name="home">Home</string>
     <string name="registration">Registration</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="clothes">
+        <item>MERAH BERBUNGA</item>
+        <item>KEBAYA BELUDRU</item>
+        <item>KEBAYA DINAMIS</item>
+        <item>RUFFLE MANIS</item>
+        <item>BLACK MAMBA</item>
+        <item>KEBAYA RIAU-PAHANG</item>
+        <item>OPAH KALSUM</item>
+    </string-array>
+
+    <string-array name="sizes">
+        <item>S</item>
+        <item>M</item>
+        <item>L</item>
+        <item>XL</item>
+        <item>XXL</item>
+    </string-array>
+
+    <string-array name="items">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
 </resources>

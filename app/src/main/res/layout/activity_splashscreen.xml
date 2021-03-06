@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/kelabu"
+    android:background="#A1B8B8"
     tools:context=".activity_splashscreen">
 
     <ImageView
@@ -15,23 +15,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.162"
+        app:layout_constraintVertical_bias="0.52"
         app:srcCompat="@mipmap/ic_homeicon2" />
 
-    <TextView
-        android:id="@+id/tv_welcomesplashscreen"
-        android:layout_width="411dp"
-        android:layout_height="93dp"
-        android:fontFamily="serif"
-        android:text="Welcome to Arca Boutique"
-        android:textAlignment="center"
-        android:textColor="#0A9510"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.247" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

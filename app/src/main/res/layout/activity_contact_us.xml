@@ -11,7 +11,7 @@
         android:id="@+id/btn_facebook"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="40dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,14 +54,14 @@
         android:id="@+id/tv_Arcacom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:text="arcacreation08@gmail.com"
         android:textColor="#F8F2F2"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.855"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_call" />
 
@@ -83,7 +83,7 @@
         android:id="@+id/btn_insta"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="44dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
@@ -138,7 +138,7 @@
         android:id="@+id/tv_Insta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="620dp"
         android:text="INSTAGRAM"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
@@ -146,7 +146,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toEndOf="@+id/btn_insta"
-        app:layout_constraintTop_toBottomOf="@+id/tv_face" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_our"

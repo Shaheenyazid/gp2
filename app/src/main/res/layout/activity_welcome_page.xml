@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomePage"
+    android:background="@drawable/welcomepage">
+
+    <TextView
+        android:id="@+id/tv_welcomesplashscreen"
+        android:layout_width="411dp"
+        android:layout_height="93dp"
+        android:fontFamily="serif"
+        android:text="Welcome to Arca Boutique"
+        android:textAlignment="center"
+        android:textColor="#404042"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062" />
+
+    <Button
+        android:id="@+id/btn_log"
+        android:layout_width="173dp"
+        android:layout_height="52dp"
+        android:background="@drawable/buruk"
+        android:text="LOGIN"
+        android:textColor="#A1B8B8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.318" />
+
+    <Button
+        android:id="@+id/btn_reg"
+        android:layout_width="173dp"
+        android:layout_height="52dp"
+        android:background="@drawable/buruk"
+        android:text="SIGN UP"
+        android:textColor="#A1B8B8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.445" />
+</androidx.constraintlayout.widget.ConstraintLayout>

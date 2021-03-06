@@ -30,6 +30,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/tvCatalog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:background="#002196F3"
+            android:text="Catalog"
+            android:textAllCaps="true"
+            android:textColor="#E91E63"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.537"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <View
             android:id="@+id/view1"
             android:layout_width="wrap_content"
@@ -188,11 +204,13 @@
             android:id="@+id/tvNameRed"
             android:layout_width="183dp"
             android:layout_height="49dp"
-            android:layout_marginTop="8dp"
-            android:text="Arca09-19_Poppy (Top only)"
-            android:textColor="#EAEAEA"
-            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:text="MERAH BERBUNGA"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toEndOf="@+id/ivRed"
             app:layout_constraintTop_toTopOf="@+id/ivRed" />
 
@@ -220,6 +238,18 @@
             app:layout_constraintStart_toEndOf="@+id/ivRed"
             app:layout_constraintTop_toBottomOf="@+id/tvColorRed" />
 
+        <TextView
+            android:id="@+id/tvSizeRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:text="Size Available: (M,L,XL)"
+            android:textColor="#FBFBFB"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivRed"
+            app:layout_constraintTop_toBottomOf="@+id/tvColorRed" />
+
         <Button
             android:id="@+id/btnPlaceOrder"
             android:layout_width="145dp"
@@ -227,7 +257,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:background="#E82665"
+            android:background="@drawable/cantik"
             android:text="Place Order"
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -239,9 +269,10 @@
             android:layout_width="183dp"
             android:layout_height="49dp"
             android:layout_marginTop="8dp"
-            android:text="Arca09-16_Sweet Pea (Top only)"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
+            android:text="KEBAYA BELUDRU"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ivBlue"
             app:layout_constraintTop_toBottomOf="@+id/ivRed" />
@@ -271,13 +302,26 @@
          app:layout_constraintTop_toBottomOf="@id/tvColorBlue" />
 
         <TextView
+            android:id="@+id/tvSizeBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:text="Size Available: (M,L,XL,XXL)"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivBlue"
+            app:layout_constraintTop_toBottomOf="@id/tvColorBlue" />
+
+        <TextView
             android:id="@+id/tvNameMar"
             android:layout_width="183dp"
             android:layout_height="49dp"
             android:layout_marginTop="8dp"
-            android:text="Arca09-13_Amaryllis (Top only)"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
+            android:text="KEBAYA DINAMIS"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ivMar"
             app:layout_constraintTop_toBottomOf="@+id/ivBlue" />
@@ -307,13 +351,26 @@
             app:layout_constraintTop_toBottomOf="@+id/tvColorMar" />
 
         <TextView
+            android:id="@+id/tvSizeMar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:text="Size Available: (S,M,L,XL,XXL)"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivMar"
+            app:layout_constraintTop_toBottomOf="@+id/tvColorMar" />
+
+        <TextView
             android:id="@+id/tvNameGreen"
             android:layout_width="183dp"
             android:layout_height="49dp"
             android:layout_marginTop="8dp"
-            android:text="Arca09-08_Gerbera Daisy (Top only)"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
+            android:text="RUFFLE MANIS"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ivGreen"
             app:layout_constraintTop_toBottomOf="@+id/ivMar" />
@@ -343,13 +400,28 @@
             app:layout_constraintTop_toBottomOf="@+id/tvColorGreen" />
 
         <TextView
+            android:id="@+id/tvSizeGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Size Available: (S,L,XXL)"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ivGreen"
+            app:layout_constraintTop_toBottomOf="@+id/tvPriceGreen" />
+
+        <TextView
             android:id="@+id/tvNameBlack"
             android:layout_width="183dp"
             android:layout_height="49dp"
             android:layout_marginTop="8dp"
-            android:text="Arca09-02_Black Calla (Top only)"
-            android:textColor="#F4F4F4"
-            android:textSize="16sp"
+            android:text="BLACK MAMBA"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ivBlack"
             app:layout_constraintTop_toBottomOf="@+id/ivGreen" />
@@ -379,13 +451,26 @@
             app:layout_constraintTop_toBottomOf="@+id/tvColorBlack" />
 
         <TextView
+            android:id="@+id/tvSizeBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:text="Size Available: (S,L,XL)"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivBlack"
+            app:layout_constraintTop_toBottomOf="@+id/tvColorBlack" />
+
+        <TextView
             android:id="@+id/tvNamePeach"
             android:layout_width="183dp"
             android:layout_height="49dp"
             android:layout_marginTop="8dp"
-            android:text="Arca09-05_Dusty Lilac (Top only)"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
+            android:text="KEBAYA RIAU-PAHANG"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ivPeach"
             app:layout_constraintTop_toBottomOf="@+id/ivBlack" />
@@ -415,13 +500,26 @@
             app:layout_constraintTop_toBottomOf="@+id/tvColorPeach" />
 
         <TextView
+            android:id="@+id/tvSizePeach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:text="Size Available: (S,M,L,XL)"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivPeach"
+            app:layout_constraintTop_toBottomOf="@+id/tvColorPeach" />
+
+        <TextView
             android:id="@+id/tvNameOpah"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Opah Kalsom (Top only)"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
+            android:text="OPAH KALSUM "
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ivOpah"
             app:layout_constraintTop_toBottomOf="@+id/ivPeach" />
@@ -430,8 +528,8 @@
             android:id="@+id/tvColorOpah"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
             android:text="Color: Peach with green"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
@@ -442,9 +540,21 @@
             android:id="@+id/tvPriceOpah"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="28dp"
             android:text="Price: RM200"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivOpah"
+            app:layout_constraintTop_toBottomOf="@+id/tvColorOpah" />
+
+        <TextView
+            android:id="@+id/tvSizeOpah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="76dp"
+            android:text="Size Available: (S,M,L,XL)"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/ivOpah"

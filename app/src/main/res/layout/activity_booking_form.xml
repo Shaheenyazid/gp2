@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A1B8B8"
+    tools:context=".BookingForm">
+
+    <TextView
+        android:id="@+id/tvBooking"
+        android:layout_width="383dp"
+        android:layout_height="53dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Please fill this form to confirm your booking"
+        android:textAlignment="center"
+        android:textColor="#05177A"
+        android:textSize="21sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.188" />
+
+    <ImageView
+        android:id="@+id/ivClotheInfo"
+        android:layout_width="105dp"
+        android:layout_height="135dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBooking"
+        app:layout_constraintVertical_bias="0.025"
+        app:srcCompat="@drawable/dress" />
+
+    <Spinner
+        android:id="@+id/etClotheName"
+        android:layout_width="171dp"
+        android:layout_height="40dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toEndOf="@+id/ivClotheInfo"
+        app:layout_constraintTop_toBottomOf="@+id/tvBooking"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <Spinner
+        android:id="@+id/etSizeName"
+        android:layout_width="171dp"
+        android:layout_height="40dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.347" />
+
+    <TextView
+        android:id="@+id/tvUserInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customer Information"
+        android:textColor="#01188F"
+        android:textSize="23sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="93dp"
+        android:layout_height="98dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:srcCompat="@mipmap/ic_homeicon2" />
+
+    <EditText
+        android:id="@+id/etFullName"
+        android:layout_width="352dp"
+        android:layout_height="44dp"
+        android:drawableLeft="@drawable/ic_fullname"
+        android:ems="10"
+        android:hint="Fullname"
+        android:background="@drawable/custom_input"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.583" />
+
+    <EditText
+        android:id="@+id/etAddressCust"
+        android:layout_width="352dp"
+        android:layout_height="44dp"
+        android:drawableLeft="@drawable/ic_home"
+        android:ems="10"
+        android:hint="Address"
+        android:background="@drawable/custom_input"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.777" />
+
+    <EditText
+        android:id="@+id/etPhoneCust"
+        android:layout_width="352dp"
+        android:layout_height="44dp"
+        android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/ic_phoneno"
+        android:ems="10"
+        android:hint="Mobile Number eg:(+601111944453)"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.679" />
+
+
+
+    <Button
+        android:id="@+id/btnBooking"
+        android:layout_width="209dp"
+        android:layout_height="44dp"
+        android:background="@drawable/cantik"
+        android:text="CONFIRM BOOKING"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        tools:text="Confirm Booking" />
+
+    <Spinner
+        android:id="@+id/etItem"
+        android:layout_width="171dp"
+        android:layout_height="40dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.413" />
+
+    <Button
+        android:id="@+id/etDate"
+        android:layout_width="112dp"
+        android:layout_height="49dp"
+        android:background="@drawable/custom_input"
+        android:text="Date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.899"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.865" />
+
+    <TextView
+        android:id="@+id/tvDate3"
+        android:layout_width="118dp"
+        android:layout_height="24dp"
+        android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/ic_baseline_date_range_24"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.286"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.859" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

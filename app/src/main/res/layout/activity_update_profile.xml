@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/cut_card_background"
+    android:backgroundTint="#FFA07A"
     tools:context=".UpdateProfile">
 
     <ImageView
@@ -25,7 +26,10 @@
         android:layout_height="49dp"
         android:ems="10"
         android:hint="Name"
+        android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/ic_username"
         android:inputType="textPersonName"
+        android:textColor="#068CC8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -36,12 +40,15 @@
 
     <EditText
         android:id="@+id/etAgeUpdate"
-        android:layout_width="227dp"
-        android:layout_height="46dp"
+        android:layout_width="230dp"
+        android:layout_height="49dp"
         android:layout_marginBottom="120dp"
         android:ems="10"
         android:hint="Age"
+        android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/ic_age"
         android:inputType="number"
+        android:textColor="#0761AA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -51,9 +58,11 @@
 
     <TextView
         android:id="@+id/tvEmailUpdate"
-        android:layout_width="231dp"
-        android:layout_height="39dp"
-        android:text="Email"
+        android:layout_width="230dp"
+        android:layout_height="49dp"
+        android:drawableLeft="@drawable/ic_email"
+        android:background="@drawable/custom_input"
+        android:textColor="#055FA8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,11 +71,14 @@
 
     <EditText
         android:id="@+id/etNoUpdate"
-        android:layout_width="227dp"
-        android:layout_height="46dp"
+        android:layout_width="230dp"
+        android:layout_height="49dp"
         android:ems="10"
         android:hint="No Phone"
+        android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/ic_no"
         android:inputType="phone"
+        android:textColor="#0565B3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
@@ -79,6 +91,7 @@
         android:layout_width="155dp"
         android:layout_height="46dp"
         android:text="SAVE"
+        android:background="@drawable/cantik"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

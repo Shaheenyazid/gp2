@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#FFA07A"
     android:background="@drawable/cut_card_background"
     tools:context=".ProfileActivity">
 
@@ -20,25 +21,42 @@
         app:srcCompat="@mipmap/ic_launcher" />
 
     <TextView
+        android:id="@+id/iv_Us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#002E3241"
+        android:text="My Profile"
+        android:textColor="#0C0C0C"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/tvProfileName"
-        android:layout_width="193dp"
-        android:layout_height="28dp"
+        android:layout_width="237dp"
+        android:layout_height="29dp"
+        android:background="@drawable/custom_input"
         android:drawableLeft="@drawable/ic_username"
         android:text="Name"
         android:textColor="#1CB6A8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivProfilePic"
-        app:layout_constraintVertical_bias="0.114" />
+        app:layout_constraintVertical_bias="0.11" />
 
     <TextView
         android:id="@+id/tvProfileEmail"
-        android:layout_width="193dp"
-        android:layout_height="28dp"
+        android:layout_width="237dp"
+        android:layout_height="29dp"
         android:drawableLeft="@drawable/ic_email"
         android:text="Email"
+        android:background="@drawable/custom_input"
         android:textColor="#1DC3B3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,10 +67,11 @@
 
     <TextView
         android:id="@+id/tvProfileAge"
-        android:layout_width="193dp"
-        android:layout_height="28dp"
+        android:layout_width="237dp"
+        android:layout_height="29dp"
         android:drawableLeft="@drawable/ic_age"
         android:text="Age"
+        android:background="@drawable/custom_input"
         android:textColor="#15AFA1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,10 +82,11 @@
 
     <TextView
         android:id="@+id/tvProfileNo"
-        android:layout_width="193dp"
-        android:layout_height="28dp"
+        android:layout_width="237dp"
+        android:layout_height="29dp"
         android:drawableLeft="@drawable/ic_no"
         android:text="No Phone"
+        android:background="@drawable/custom_input"
         android:textColor="#19B5A6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +99,7 @@
         android:id="@+id/btnProfileUpdate"
         android:layout_width="159dp"
         android:layout_height="49dp"
-        android:background="#E91E63"
+        android:background="@drawable/cantik"
         android:text="Update Profile"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -91,15 +111,16 @@
 
     <Button
         android:id="@+id/btnChangePassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="159dp"
+        android:layout_height="45dp"
+        android:background="@drawable/buruk"
         android:text="Change Password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnProfileUpdate"
-        app:layout_constraintVertical_bias="0.509" />
+        app:layout_constraintVertical_bias="0.274" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
