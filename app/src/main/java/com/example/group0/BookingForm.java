@@ -27,11 +27,12 @@ import com.google.firebase.storage.StorageReference;
 import java.text.DateFormat;
 import java.util.Calendar;
 
-public class BookingForm extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, AdapterView.OnItemSelectedListener {
+public class BookingForm extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
      EditText CustFullName, CustPhoneNum, CustAddress;
      Button ConfBut, CustDate;
      Spinner CustClothe, CustSize, CustItem;
+     String newcloth, newsize, newitem;
      private FirebaseDatabase firebaseDatabase;
      private DatabaseReference storageReference;
      String clothe, size, item, fullname, phoneNo, address, currentDateString;
@@ -49,20 +50,56 @@ public class BookingForm extends AppCompatActivity implements DatePickerDialog.O
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.clothes, android.R.layout.simple_spinner_item );
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         CustClothe.setAdapter(adapter);
-        CustClothe.setOnItemSelectedListener(this);
+       // CustClothe.setOnItemSelectedListener(this);
         
+        CustClothe.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                newcloth = parent.getItemAtPosition(position).toString();
+                Toast.makeText(parent.getContext(), newcloth, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         CustSize = findViewById(R.id.etSizeName);
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.sizes, android.R.layout.simple_spinner_item );
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         CustSize.setAdapter(adapter2);
-        CustSize.setOnItemSelectedListener(this);
+       // CustSize.setOnItemSelectedListener(this);
+        CustSize.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                newsize = parent.getItemAtPosition(position).toString();
+                Toast.makeText(parent.getContext(), newsize, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         CustItem = findViewById(R.id.etItem);
         ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.items, android.R.layout.simple_spinner_item );
         adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         CustItem.setAdapter(adapter3);
-        CustItem.setOnItemSelectedListener(this);
+       // CustItem.setOnItemSelectedListener(this);
+        CustItem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                newitem = parent.getItemAtPosition(position).toString();
+                Toast.makeText(parent.getContext(), newitem, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         CustFullName = findViewById(R.id.etFullName);
         CustPhoneNum = findViewById(R.id.etPhoneCust);
@@ -97,7 +134,7 @@ public class BookingForm extends AppCompatActivity implements DatePickerDialog.O
                 address = CustAddress.getEditableText().toString().trim();
 
                 validate();
-                BookingInfo bookingInfo = new BookingInfo(clothe, size, item, fullname, phoneNo, address, currentDateString);
+                BookingInfo bookingInfo = new BookingInfo(newcloth, newsize, newitem, fullname, phoneNo, address, currentDateString);
                 storageReference.setValue(bookingInfo);
 
             }
@@ -143,14 +180,15 @@ public class BookingForm extends AppCompatActivity implements DatePickerDialog.O
 
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String text = parent.getItemAtPosition(position).toString();
-        Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
+//   @Override
+//    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//        String text = parent.getItemAtPosition(position).toString();
+//        Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
+//    }
+//
+//
+//    @Override
+//    public void onNothingSelected(AdapterView<?> parent) {
+//
+//    }
 }
