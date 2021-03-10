@@ -159,7 +159,7 @@ public class BookingForm extends AppCompatActivity implements DatePickerDialog.O
             startActivity(new Intent(BookingForm.this, BookingForm.class));
         }else{
             result = true;
-            startActivity(new Intent(BookingForm.this, SecondActivity.class));
+            startActivity(new Intent(BookingForm.this, Invoice.class));
         }
 
         return result;
@@ -174,10 +174,6 @@ public class BookingForm extends AppCompatActivity implements DatePickerDialog.O
         currentDateString = DateFormat.getDateInstance().format(c.getTime());
         Date = findViewById(R.id.tvDate3);
         Date.setText(currentDateString);
-
-
-
-
     }
 
 //   @Override

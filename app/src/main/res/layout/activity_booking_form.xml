@@ -170,30 +170,31 @@
 
     <Button
         android:id="@+id/etDate"
-        android:layout_width="112dp"
-        android:layout_height="49dp"
+        android:layout_width="108dp"
+        android:layout_height="35dp"
         android:background="@drawable/custom_input"
         android:text="Date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.899"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.865" />
+        app:layout_constraintVertical_bias="0.866" />
 
     <TextView
         android:id="@+id/tvDate3"
-        android:layout_width="118dp"
-        android:layout_height="24dp"
+        android:layout_width="186dp"
+        android:layout_height="32dp"
         android:background="@drawable/custom_input"
         android:drawableLeft="@drawable/ic_baseline_date_range_24"
-        android:text="TextView"
+        android:text="Pickup Date"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.286"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.859" />
+        app:layout_constraintVertical_bias="0.865" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
