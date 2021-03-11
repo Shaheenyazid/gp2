@@ -35,6 +35,7 @@ public class Invoice extends AppCompatActivity {
     int pageWidth = 1200;
     Date dateObj;
     DateFormat dateFormat;
+    float[] prices = new float[] {0, 200, 300, 450, 325, 500};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +62,7 @@ public class Invoice extends AppCompatActivity {
     private void createPDF() {
         createButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
 
                 dateObj = new Date();
 
@@ -103,6 +104,70 @@ public class Invoice extends AppCompatActivity {
 
                     dateFormat = new SimpleDateFormat("HH:mm:ss");
                     canvas.drawText("Time" + dateFormat.format(dateObj), -20, 690, myPaint);
+
+                    myPaint.setStyle(Paint.Style.STROKE);
+                    myPaint.setStrokeWidth(2);
+                    canvas.drawRect(20, 780, pageWidth - 20, 860, myPaint);
+
+                    myPaint.setTextAlign(Paint.Align.LEFT);
+                    myPaint.setStyle(Paint.Style.FILL);
+                    canvas.drawText("Si.No.", 40, 830, myPaint);
+                    canvas.drawText("Item Description", 200, 830, myPaint);
+                    canvas.drawText("Price", 700, 830, myPaint);
+                    canvas.drawText("Qty", 900, 830, myPaint);
+                    canvas.drawText("Total", 1050, 830, myPaint);
+
+                    canvas.drawLine(180, 790, 180, 840, myPaint);
+                    canvas.drawLine(680, 790, 680, 840, myPaint);
+                    canvas.drawLine(880, 790, 880, 840, myPaint);
+                    canvas.drawLine(1030, 790, 1030, 840, myPaint);
+
+                    float total1 = 0, total2 = 0;
+                    if (item1spinner.getSelectedItemPosition()!=0){
+                        canvas.drawText("1", 40, 950, myPaint);
+                        canvas.drawText(item1spinner.getSelectedItem().toString(), 200, 950, myPaint);
+                        canvas.drawText(String.valueOf(prices[item1spinner.getSelectedItemPosition()]), 700, 950, myPaint);
+                        canvas.drawText(qty1.getText().toString(), 900, 950, myPaint);
+                        total1 = Float.parseFloat(qty1.getText().toString())*prices[item1spinner.getSelectedItemPosition()];
+                        myPaint.setTextAlign(Paint.Align.LEFT);
+                        canvas.drawText(String.valueOf(total1), pageWidth - 40, 950, myPaint);
+                        myPaint.setTextAlign(Paint.Align.LEFT);
+                    }
+
+                    if (item2spinner.getSelectedItemPosition()!=0){
+                        canvas.drawText("2", 40, 1050, myPaint);
+                        canvas.drawText(item2spinner.getSelectedItem().toString(), 200, 1050, myPaint);
+                        canvas.drawText(String.valueOf(prices[item2spinner.getSelectedItemPosition()]), 700, 1050, myPaint);
+                        canvas.drawText(qty2.getText().toString(), 900, 1050, myPaint);
+                        total2 = Float.parseFloat(qty2.getText().toString())*prices[item2spinner.getSelectedItemPosition()];
+                        myPaint.setTextAlign(Paint.Align.LEFT);
+                        canvas.drawText(String.valueOf(total2), pageWidth-40, 1050, myPaint);
+                        myPaint.setTextAlign(Paint.Align.LEFT);
+                    }
+
+                    float subtotal = total1 + total2;
+                    canvas.drawLine(680, 1200, pageWidth - 20, 1200, myPaint);
+                    canvas.drawText("Sub Total", 700, 1250, myPaint);
+                    canvas.drawText(";", 900, 1250, myPaint);
+                    myPaint.setTextAlign(Paint.Align.LEFT);
+                    canvas.drawText(String.valueOf(subtotal), pageWidth-40, 1250, myPaint);
+
+                    myPaint.setTextAlign(Paint.Align.LEFT);
+                    canvas.drawText("Tax (12%)", 700, 1300, myPaint);
+                    canvas.drawText(";", 900, 1300, myPaint);
+                    myPaint.setTextAlign(Paint.Align.RIGHT);
+                    canvas.drawText(String.valueOf(subtotal*12/100), pageWidth-40, 1300, myPaint);
+                    myPaint.setTextAlign(Paint.Align.LEFT);
+
+                    myPaint.setColor(Color.rgb(247, 147, 30));
+                    canvas.drawRect(680, 1350, pageWidth-20, 1450, myPaint);
+
+                    myPaint.setColor(Color.BLACK);
+                    myPaint.setTextSize(50f);
+                    myPaint.setTextAlign(Paint.Align.LEFT);
+                    canvas.drawText("Total", 700, 1415, myPaint);
+                    myPaint.setTextAlign(Paint.Align.RIGHT);
+                    canvas.drawText(String.valueOf(subtotal + (subtotal*12/100)), pageWidth-40, 1415, myPaint);
 
                     myPdfDocument.finishPage(myPage1);
                     File file = new File(Environment.getExternalStorageDirectory(), "/Hello.pdf");
