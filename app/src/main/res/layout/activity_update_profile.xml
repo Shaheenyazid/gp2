@@ -20,14 +20,15 @@
         app:layout_constraintVertical_bias="0.17"
         app:srcCompat="@mipmap/ic_launcher" />
 
+
     <EditText
         android:id="@+id/etNameUpdate"
         android:layout_width="230dp"
         android:layout_height="49dp"
-        android:ems="10"
-        android:hint="Name"
         android:background="@drawable/custom_input"
         android:drawableLeft="@drawable/ic_username"
+        android:ems="10"
+        android:hint="Name"
         android:inputType="textPersonName"
         android:textColor="#068CC8"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,18 +36,17 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivProfileUpdate"
-        app:layout_constraintVertical_bias="0.154" />
-
+        app:layout_constraintVertical_bias="0.122" />
 
     <EditText
         android:id="@+id/etAgeUpdate"
         android:layout_width="230dp"
         android:layout_height="49dp"
         android:layout_marginBottom="120dp"
-        android:ems="10"
-        android:hint="Age"
         android:background="@drawable/custom_input"
         android:drawableLeft="@drawable/ic_age"
+        android:ems="10"
+        android:hint="Age"
         android:inputType="number"
         android:textColor="#0761AA"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -54,20 +54,21 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvEmailUpdate"
-        app:layout_constraintVertical_bias="0.128" />
+        app:layout_constraintVertical_bias="0.228" />
 
     <TextView
         android:id="@+id/tvEmailUpdate"
         android:layout_width="230dp"
         android:layout_height="49dp"
-        android:drawableLeft="@drawable/ic_email"
         android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/ic_email"
         android:textColor="#055FA8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNameUpdate"
-        app:layout_constraintVertical_bias="0.116" />
+        app:layout_constraintVertical_bias="0.059" />
 
     <EditText
         android:id="@+id/etNoUpdate"

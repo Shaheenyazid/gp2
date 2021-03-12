@@ -52,7 +52,7 @@ public class Invoice extends AppCompatActivity {
         qty2 = findViewById(R.id.editTextQty2);
 
 
-        bmp = BitmapFactory.decodeResource(getResources(), R.drawable.welcomepage);             //saya tukar kat sini
+        bmp = BitmapFactory.decodeResource(getResources(), R.drawable.coast);             //saya tukar kat sini
         scaledbmp = Bitmap.createScaledBitmap(bmp, 1200, 518, false);
 
         ActivityCompat.requestPermissions(this,new String[]{
