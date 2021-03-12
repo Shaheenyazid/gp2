@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.52"
-        app:srcCompat="@mipmap/ic_homeicon2" />
+        app:srcCompat="@drawable/ic_homeicon2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

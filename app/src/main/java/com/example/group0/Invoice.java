@@ -37,6 +37,7 @@ public class Invoice extends AppCompatActivity {
     DateFormat dateFormat;
     float[] prices = new float[] {0, 200, 300, 450, 325, 500};
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +50,9 @@ public class Invoice extends AppCompatActivity {
         phoneNo = findViewById(R.id.editTextPhoneNo);
         qty1 = findViewById(R.id.editTextQty1);
         qty2 = findViewById(R.id.editTextQty2);
-        bmp = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher_background);
+
+
+        bmp = BitmapFactory.decodeResource(getResources(), R.drawable.welcomepage);             //saya tukar kat sini
         scaledbmp = Bitmap.createScaledBitmap(bmp, 1200, 518, false);
 
         ActivityCompat.requestPermissions(this,new String[]{

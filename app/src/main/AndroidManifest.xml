@@ -11,6 +11,8 @@
         android:label="Arca Creation"
         android:supportsRtl="true"
         android:requestLegacyExternalStorage="true"
+        android:largeHeap="true"
+        android:hardwareAccelerated="false"
         android:theme="@style/Theme.Group0">
         <activity android:name=".Invoice"></activity>
         <activity android:name=".WelcomePage" />
