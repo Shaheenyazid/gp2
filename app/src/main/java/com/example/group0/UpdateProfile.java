@@ -34,8 +34,7 @@ import java.io.IOException;
 
 public class UpdateProfile extends AppCompatActivity {
 
-    private EditText newUserName, newUserAge, newUserNo;
-    private TextView newUserEmail;
+    private EditText newUserName, newUserAge, newUserNo,newUserEmail;
     private Button Save;
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
@@ -44,6 +43,7 @@ public class UpdateProfile extends AppCompatActivity {
     Uri imagePath;
     private StorageReference storageReference;
     private FirebaseStorage firebaseStorage;
+    String name, age, no, email;
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -108,33 +108,41 @@ public class UpdateProfile extends AppCompatActivity {
         Save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = newUserName.getText().toString();
-                String age = newUserAge.getText().toString();
-                String no = newUserNo.getText().toString();
-               // String email = newUserEmail.getText().toString();
-                UserProfile userProfile = new UserProfile();
+                 name = newUserName.getText().toString();
+                 age = newUserAge.getText().toString();
+                 no = newUserNo.getText().toString();
+                 email = newUserEmail.getText().toString();
 
-               userProfile.setUserAge(age);
-               userProfile.setUserName(name);
-               userProfile.setUserNo(no);
+                 if(name.isEmpty() || age.isEmpty() || no.isEmpty() || email.isEmpty()){
+                     Toast.makeText(UpdateProfile.this, "Please enter all the details again !!", Toast.LENGTH_SHORT).show();
+                 }else{
+                     // String email = newUserEmail.getText().toString();
+                     UserProfile userProfile = new UserProfile();
 
-                // databaseReference.setValue(userProfile);
+                     userProfile.setUserAge(age);
+                     userProfile.setUserName(name);
+                     userProfile.setUserNo(no);
+                     userProfile.setUserEmail(email);
 
-                StorageReference imageReference = storageReference.child(firebaseAuth.getUid()).child("Images").child("Profile Pic"); //User Id/Image/profile.pic.png
-                UploadTask uploadTask = imageReference.putFile(imagePath);
-                uploadTask.addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(UpdateProfile.this,"Upload Fail", Toast.LENGTH_SHORT).show();
-                    }
-                }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        Toast.makeText(UpdateProfile.this,"Upload Successful", Toast.LENGTH_SHORT).show();
-                    }
-                });
+                      databaseReference.setValue(userProfile);
 
-                finish();
+                     StorageReference imageReference = storageReference.child(firebaseAuth.getUid()).child("Images").child("Profile Pic"); //User Id/Image/profile.pic.png
+                     UploadTask uploadTask = imageReference.putFile(imagePath);
+                     uploadTask.addOnFailureListener(new OnFailureListener() {
+                         @Override
+                         public void onFailure(@NonNull Exception e) {
+                             Toast.makeText(UpdateProfile.this,"Upload Fail", Toast.LENGTH_SHORT).show();
+                         }
+                     }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                         @Override
+                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                             Toast.makeText(UpdateProfile.this,"Upload Successful", Toast.LENGTH_SHORT).show();
+                         }
+                     });
+
+                     finish();
+                     Toast.makeText(UpdateProfile.this,"Upload Succesfull !!", Toast.LENGTH_SHORT).show();
+                 }
             }
         });
 
@@ -158,3 +166,4 @@ public class UpdateProfile extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+

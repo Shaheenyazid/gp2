@@ -37,6 +37,7 @@ public class BookingForm extends AppCompatActivity implements DatePickerDialog.O
      private DatabaseReference storageReference;
      String clothe, size, item, fullname, phoneNo, address, currentDateString;
      TextView Date;
+     private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,9 +128,10 @@ public class BookingForm extends AppCompatActivity implements DatePickerDialog.O
             public void onClick(View v) {
 
                 String fullname, phoneNo, address;
+                firebaseAuth = FirebaseAuth.getInstance();
                 firebaseDatabase = FirebaseDatabase.getInstance();
                 phoneNo = CustPhoneNum.getEditableText().toString().trim();
-                storageReference = firebaseDatabase.getReference("Booking").child(phoneNo);
+                storageReference = firebaseDatabase.getReference("Booking").child(firebaseAuth.getUid());
                 fullname = CustFullName.getEditableText().toString().trim();
                 address = CustAddress.getEditableText().toString().trim();
 
@@ -159,7 +161,7 @@ public class BookingForm extends AppCompatActivity implements DatePickerDialog.O
             startActivity(new Intent(BookingForm.this, BookingForm.class));
         }else{
             result = true;
-            startActivity(new Intent(BookingForm.this, SecondActivity.class));
+            startActivity(new Intent(BookingForm.this, Invoice.class));
         }
 
         return result;

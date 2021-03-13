@@ -56,18 +56,21 @@
         app:layout_constraintTop_toBottomOf="@+id/tvEmailUpdate"
         app:layout_constraintVertical_bias="0.128" />
 
-    <TextView
+    <EditText
         android:id="@+id/tvEmailUpdate"
         android:layout_width="230dp"
         android:layout_height="49dp"
-        android:drawableLeft="@drawable/ic_email"
         android:background="@drawable/custom_input"
+        android:textSize="18sp"
+        android:hint="Email"
+        android:drawableLeft="@drawable/ic_email"
         android:textColor="#055FA8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNameUpdate"
-        app:layout_constraintVertical_bias="0.116" />
+        app:layout_constraintVertical_bias="0.078" />
 
     <EditText
         android:id="@+id/etNoUpdate"

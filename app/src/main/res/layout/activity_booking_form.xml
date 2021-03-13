@@ -187,7 +187,7 @@
         android:layout_height="24dp"
         android:background="@drawable/custom_input"
         android:drawableLeft="@drawable/ic_baseline_date_range_24"
-        android:text="TextView"
+        android:hint="Date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.286"

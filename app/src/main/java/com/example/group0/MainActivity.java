@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         forgotPassword = (TextView)findViewById(R.id.tvForgotPassword);
 
         Info.setText("No of attempts remaining: 5");
-
         firebaseAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
 
@@ -78,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
     private void validate(String userName, String userPassword) {
 
         progressDialog.setMessage("Have a Good Day and Happy Shopping!!");
@@ -103,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
 
     private void checkEmailVerification(){
         FirebaseUser firebaseUser = firebaseAuth.getInstance().getCurrentUser();

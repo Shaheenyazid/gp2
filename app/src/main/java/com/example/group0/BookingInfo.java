@@ -2,7 +2,7 @@ package com.example.group0;
 
 public class BookingInfo {
 
-    String clothe, size, item, fullname, phoneNo, address, date;
+    String clothe, size, item, fullname, phoneNo, address, date, total;
 
     public BookingInfo (){
 
@@ -16,6 +16,14 @@ public class BookingInfo {
         this.phoneNo = phoneNo;
         this.address = address;
         this.date = date;
+    }
+
+    public String getTotal() {
+        return total;
+    }
+
+    public void setTotal(String total) {
+        this.total = total;
     }
 
     public String getClothe() {

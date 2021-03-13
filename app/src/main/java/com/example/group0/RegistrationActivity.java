@@ -46,14 +46,14 @@ public class RegistrationActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == PICK_IMAGE && resultCode == RESULT_OK && data.getData() !=null) {
-                imagePath = data.getData();
-                try {
-                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imagePath);
-                    userProfilePic.setImageBitmap(bitmap);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-    }
+            imagePath = data.getData();
+            try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imagePath);
+                userProfilePic.setImageBitmap(bitmap);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         super.onActivityResult(requestCode, resultCode, data);
     }
 
@@ -132,11 +132,11 @@ public class RegistrationActivity extends AppCompatActivity {
     private Boolean validate(){
         Boolean result = false;
 
-         name = userName.getText().toString();
-         password = userPassword.getText().toString();
-         email = userEmail.getText().toString();
-         noPhone = userNo.getText().toString();
-         age = userAge.getText().toString();
+        name = userName.getText().toString();
+        password = userPassword.getText().toString();
+        email = userEmail.getText().toString();
+        noPhone = userNo.getText().toString();
+        age = userAge.getText().toString();
 
 
         if(name.isEmpty() || password.isEmpty() || email.isEmpty() || noPhone.isEmpty() || age.isEmpty()  || imagePath == null){
@@ -155,7 +155,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if(task.isSuccessful()){
-                       sendUserData();
+                        sendUserData();
                         Toast.makeText(RegistrationActivity.this,"Succesfully Register, Verification mail sent !!", Toast.LENGTH_SHORT).show();
                         firebaseAuth.signOut();
                         finish();
@@ -189,3 +189,4 @@ public class RegistrationActivity extends AppCompatActivity {
         myRef.setValue(userProfile);
     }
 }
+
