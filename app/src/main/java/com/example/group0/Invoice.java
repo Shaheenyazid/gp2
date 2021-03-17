@@ -71,7 +71,7 @@ public class Invoice extends AppCompatActivity {
                 double totalPrice = numItem*150;
                 strTotalPrice = String.valueOf(totalPrice);
 
-                total.setText(strTotalPrice);
+                total.setText("RM" + strTotalPrice);
 
             }
 
