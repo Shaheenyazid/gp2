@@ -176,10 +176,6 @@ public class BookingForm extends AppCompatActivity implements DatePickerDialog.O
         currentDateString = DateFormat.getDateInstance().format(c.getTime());
         Date = findViewById(R.id.tvDate3);
         Date.setText(currentDateString);
-
-
-
-
     }
 
 //   @Override

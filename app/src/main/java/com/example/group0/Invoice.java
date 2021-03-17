@@ -47,7 +47,7 @@ public class Invoice extends AppCompatActivity {
         BtnDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             startActivity(new Intent(Invoice.this, SecondActivity.class));
+                startActivity(new Intent(Invoice.this, SecondActivity.class));
 
             }
         });
@@ -55,23 +55,25 @@ public class Invoice extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-               BookingInfo bookingInfo = dataSnapshot.getValue(BookingInfo.class);
-               Name.setText(bookingInfo.getFullname());
-               PhoneNo.setText(bookingInfo.getphoneNo());
-               Address.setText(bookingInfo.getAddress());
-               Date.setText(bookingInfo.getDate());
-               Clothe.setText(bookingInfo.getClothe());
-               Size.setText(bookingInfo.getSize());
-               Item.setText(bookingInfo.getItem());
-              String item = bookingInfo.getItem();
+                BookingInfo bookingInfo = dataSnapshot.getValue(BookingInfo.class);
+                Name.setText(bookingInfo.getFullname());
+                PhoneNo.setText(bookingInfo.getphoneNo());
+                Address.setText(bookingInfo.getAddress());
+                Date.setText(bookingInfo.getDate());
+                Clothe.setText(bookingInfo.getClothe());
+                Size.setText(bookingInfo.getSize());
+                Item.setText(bookingInfo.getItem());
+                String item = bookingInfo.getItem();
 
 
 
                 int numItem = Integer.parseInt(item);
                 double totalPrice = numItem*150;
-                strTotalPrice = String.valueOf(totalPrice);
+               // strTotalPrice = String.valueOf(totalPrice);
+                strTotalPrice = String.format("%.2f", totalPrice);
 
                 total.setText("RM" + strTotalPrice);
+
 
             }
 

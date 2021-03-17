@@ -19,7 +19,6 @@ public class Clothes extends AppCompatActivity {
         setContentView(R.layout.activity_clothes);
 
         PlaceOrder = findViewById(R.id.btnPlaceOrder);
-
         PlaceOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
