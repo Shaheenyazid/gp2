@@ -43,7 +43,6 @@ public class Invoice extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
         DatabaseReference databaseReference = firebaseDatabase.getReference("Booking").child(firebaseAuth.getUid());
-
         BtnDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,7 +50,6 @@ public class Invoice extends AppCompatActivity {
 
             }
         });
-
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -64,19 +62,12 @@ public class Invoice extends AppCompatActivity {
                 Size.setText(bookingInfo.getSize());
                 Item.setText(bookingInfo.getItem());
                 String item = bookingInfo.getItem();
-
-
-
                 int numItem = Integer.parseInt(item);
                 double totalPrice = numItem*150;
                // strTotalPrice = String.valueOf(totalPrice);
                 strTotalPrice = String.format("%.2f", totalPrice);
-
                 total.setText("RM" + strTotalPrice);
-
-
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(Invoice.this, error.getCode(), Toast.LENGTH_SHORT).show();

@@ -40,7 +40,6 @@ public class SecondActivity extends AppCompatActivity {
                 showToast("Clothes Clicked");
             }
         });
-
         AboutUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +47,6 @@ public class SecondActivity extends AppCompatActivity {
                 showToast("About Us Clicked");
             }
         });
-
         ContactUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,7 +54,6 @@ public class SecondActivity extends AppCompatActivity {
                 showToast("Contact Us Clicked");
             }
         });
-
         Logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,22 +63,13 @@ public class SecondActivity extends AppCompatActivity {
                 showToast("Logout Clicked");
             }
         });
-
         firebaseAuth = FirebaseAuth.getInstance();
     }
-
-
-
-
-
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
 
@@ -92,7 +80,6 @@ public class SecondActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
     private void showToast(String message){
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }

@@ -42,7 +42,6 @@ public class RegistrationActivity extends AppCompatActivity {
     private static int PICK_IMAGE = 123;
     Uri imagePath;
     private StorageReference storageReference;
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == PICK_IMAGE && resultCode == RESULT_OK && data.getData() !=null) {
@@ -56,19 +55,15 @@ public class RegistrationActivity extends AppCompatActivity {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
         setupUIViews();
-
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseStorage = FirebaseStorage.getInstance();
-
         storageReference = firebaseStorage.getReference();
         //StorageReference myRefl = storageReference.child(firebaseAuth.getUid()).getParent();
-
         userProfilePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,9 +73,6 @@ public class RegistrationActivity extends AppCompatActivity {
                 startActivityForResult(Intent.createChooser(intent, "Select image"), PICK_IMAGE);
             }
         });
-
-
-
         regButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,22 +86,14 @@ public class RegistrationActivity extends AppCompatActivity {
 
                             if (task.isSuccessful()){
                                 sendEmailVerification();
-                                //firebaseAuth.signOut();
-                                //sendUserData();
-                                //Toast.makeText(RegistrationActivity.this,"Succesfully Register, Upload complete !!", Toast.LENGTH_SHORT).show();
-                                //finish();
-                                //startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
-
                             }else{
                                 Toast.makeText(RegistrationActivity.this, "Registration Unsuccesful", Toast.LENGTH_SHORT).show();
                             }
-
                         }
                     });
                 }
             }
         });
-
         userLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -117,7 +101,6 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
     }
-
     private void setupUIViews(){
         userName = (EditText)findViewById(R.id.etUserName);
         userPassword = (EditText)findViewById(R.id.etUserPassword);
@@ -128,7 +111,6 @@ public class RegistrationActivity extends AppCompatActivity {
         userAge = (EditText)findViewById(R.id.etAge);
         userProfilePic = (ImageView)findViewById(R.id.ivPic);
     }
-
     private Boolean validate(){
         Boolean result = false;
 
@@ -137,17 +119,20 @@ public class RegistrationActivity extends AppCompatActivity {
         email = userEmail.getText().toString();
         noPhone = userNo.getText().toString();
         age = userAge.getText().toString();
-
+        String userPasswordNew = userPassword.getText().toString();
+        int a = userPasswordNew.length();
 
         if(name.isEmpty() || password.isEmpty() || email.isEmpty() || noPhone.isEmpty() || age.isEmpty()  || imagePath == null){
             Toast.makeText(this, "Please enter all the details", Toast.LENGTH_SHORT).show();
+        }else if(a<6){
+            Toast.makeText(RegistrationActivity.this, "please enter character more than 6 !!!", Toast.LENGTH_SHORT).show();
+
         }else{
             result = true;
         }
 
         return result;
     }
-
     private void sendEmailVerification(){
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         if (firebaseUser!=null){
@@ -168,7 +153,6 @@ public class RegistrationActivity extends AppCompatActivity {
 
         }
     }
-
     private void sendUserData(){
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef = firebaseDatabase.getReference("UserInfo").child(firebaseAuth.getUid()); //menentukan nk simpan dlm table mne

@@ -252,8 +252,8 @@
 
         <Button
             android:id="@+id/btnPlaceOrder"
-            android:layout_width="145dp"
-            android:layout_height="54dp"
+            android:layout_width="209dp"
+            android:layout_height="44dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"

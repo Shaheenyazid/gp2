@@ -16,25 +16,18 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class UpdatePassword extends AppCompatActivity {
-
     private Button update;
     private EditText newPassword;
     private FirebaseUser firebaseUser;
     private FirebaseAuth firebaseAuth;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_password);
-
         update = findViewById(R.id.btnUpdatePassword);
         newPassword = findViewById(R.id.etNewPassword);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         firebaseUser =  FirebaseAuth.getInstance().getCurrentUser();
-
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,9 +50,6 @@ public class UpdatePassword extends AppCompatActivity {
                 }
             }
         });
-
-
-
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

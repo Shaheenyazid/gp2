@@ -46,6 +46,7 @@
         android:ems="10"
         android:hint="Email"
         android:background="@drawable/custom_input"
+        android:paddingLeft="10dp"
         android:inputType="textPersonName"
         android:textColor="#0C8A7E"
         android:drawableLeft="@drawable/ic_username"
@@ -64,6 +65,7 @@
         android:ems="10"
         android:hint="Password"
         android:background="@drawable/custom_input"
+        android:paddingLeft="10dp"
         android:inputType="textPassword"
         android:textColor="#0E988B"
         android:drawableLeft="@drawable/ic_password"
@@ -76,8 +78,8 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="193dp"
-        android:layout_height="45dp"
+        android:layout_width="209dp"
+        android:layout_height="44dp"
         android:background="@drawable/cantik"
         android:text="Login"
         android:textColor="#FBFBFB"

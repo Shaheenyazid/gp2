@@ -41,7 +41,9 @@
         android:id="@+id/tv_intros"
         android:layout_width="311dp"
         android:layout_height="135dp"
-        android:text="Established in 2012 by Azlan Noordin, an alumni of University Technology Malaysia and a model while still being a Banker.His collections were being inspired by his late Mum, Allahyarhamah Hjh Kalsom. Choice of materials from the best quality, state of the art, sewed to perfection, added with creative embellishments making the wearer’s heart flutters with glee."
+        android:text="Established in 2012 by Azlan Noordin, an alumni of University Technology Malaysia and a model
+         while still being a Banker.His collections were being inspired by his late Mum, Allahyarhamah Hjh Kalsom. Choice of materials
+         from the best quality, state of the art, sewed to perfection, added with creative embellishments making the wearer’s heart flutters with glee."
         android:textAlignment="center"
         android:textColor="#FDFDFD"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -70,7 +72,8 @@
         android:id="@+id/tv_visions"
         android:layout_width="341dp"
         android:layout_height="67dp"
-        android:text="To provide our best service in the clothing industry by providing a booking application to book your customize clothes."
+        android:text="To provide our best service in the clothing industry by
+        providing a booking application to book your customize clothes."
         android:textColor="#F4F4F4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

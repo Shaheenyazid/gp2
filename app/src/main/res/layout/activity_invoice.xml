@@ -9,7 +9,7 @@
 
     <Button
         android:id="@+id/btn_Done"
-        android:layout_width="207dp"
+        android:layout_width="209dp"
         android:layout_height="44dp"
         android:background="@drawable/cantik"
         android:text="DONE"
@@ -34,7 +34,7 @@
 
     <TextView
         android:id="@+id/tv_name1"
-        android:layout_width="190dp"
+        android:layout_width="220dp"
         android:layout_height="27dp"
         android:background="@drawable/custom_input"
         android:textAlignment="center"
@@ -49,7 +49,7 @@
 
     <TextView
         android:id="@+id/tv_Phone"
-        android:layout_width="190dp"
+        android:layout_width="220dp"
         android:layout_height="29dp"
         android:background="@drawable/custom_input"
         android:textAlignment="center"
@@ -64,7 +64,7 @@
 
     <TextView
         android:id="@+id/tv_Address1"
-        android:layout_width="190dp"
+        android:layout_width="220dp"
         android:layout_height="27dp"
         android:background="@drawable/custom_input"
         android:textAlignment="center"
@@ -79,7 +79,7 @@
 
     <TextView
         android:id="@+id/tv_Date"
-        android:layout_width="190dp"
+        android:layout_width="220dp"
         android:layout_height="27dp"
         android:background="@drawable/custom_input"
         android:textAlignment="center"
@@ -94,7 +94,7 @@
 
     <TextView
         android:id="@+id/tv_nameClothes"
-        android:layout_width="190dp"
+        android:layout_width="220dp"
         android:layout_height="27dp"
         android:background="@drawable/custom_input"
         android:textAlignment="center"
@@ -109,7 +109,7 @@
 
     <TextView
         android:id="@+id/tv_sizeClothes"
-        android:layout_width="190dp"
+        android:layout_width="220dp"
         android:layout_height="27dp"
         android:background="@drawable/custom_input"
         android:textAlignment="center"
@@ -124,7 +124,7 @@
 
     <TextView
         android:id="@+id/tv_ItemClothes"
-        android:layout_width="190dp"
+        android:layout_width="220dp"
         android:layout_height="27dp"
         android:background="@drawable/custom_input"
         android:textAlignment="center"
@@ -251,7 +251,7 @@
 
     <TextView
         android:id="@+id/tv_total"
-        android:layout_width="190dp"
+        android:layout_width="220dp"
         android:layout_height="27dp"
         android:background="@drawable/custom_input"
         android:text="RM"

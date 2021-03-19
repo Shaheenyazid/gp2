@@ -42,6 +42,7 @@
         android:background="@drawable/custom_input"
         android:drawableLeft="@drawable/ic_username"
         android:text="Name"
+        android:paddingLeft="10dp"
         android:textColor="#1CB6A8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,6 +57,7 @@
         android:layout_height="29dp"
         android:drawableLeft="@drawable/ic_email"
         android:text="Email"
+        android:paddingLeft="10dp"
         android:background="@drawable/custom_input"
         android:textColor="#1DC3B3"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -71,6 +73,7 @@
         android:layout_height="29dp"
         android:drawableLeft="@drawable/ic_age"
         android:text="Age"
+        android:paddingLeft="10dp"
         android:background="@drawable/custom_input"
         android:textColor="#15AFA1"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -86,6 +89,7 @@
         android:layout_height="29dp"
         android:drawableLeft="@drawable/ic_no"
         android:text="No Phone"
+        android:paddingLeft="10dp"
         android:background="@drawable/custom_input"
         android:textColor="#19B5A6"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -97,8 +101,8 @@
 
     <Button
         android:id="@+id/btnProfileUpdate"
-        android:layout_width="159dp"
-        android:layout_height="49dp"
+        android:layout_width="209dp"
+        android:layout_height="44dp"
         android:background="@drawable/cantik"
         android:text="Update Profile"
         android:textStyle="bold"
@@ -109,10 +113,11 @@
         app:layout_constraintTop_toBottomOf="@+id/tvProfileNo"
         app:layout_constraintVertical_bias="0.25" />
 
+
     <Button
         android:id="@+id/btnChangePassword"
-        android:layout_width="159dp"
-        android:layout_height="45dp"
+        android:layout_width="209dp"
+        android:layout_height="44dp"
         android:background="@drawable/buruk"
         android:text="Change Password"
         app:layout_constraintBottom_toBottomOf="parent"
